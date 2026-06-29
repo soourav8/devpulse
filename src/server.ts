@@ -1,5 +1,11 @@
 import server from "./app.js";
+import { initDB } from "./db/index.js";
 
-server.app.listen(server.port, () => {
-  console.log(`Example app listening on port ${server.port}`);
-});
+const main = () => {
+  initDB();
+  server.app.listen(server.port, () => {
+    console.log(`Example app listening on port ${server.port}`);
+  });
+};
+
+main();

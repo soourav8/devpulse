@@ -1,7 +1,8 @@
 import express, { type Request, type Response } from "express";
+import config from "./config/index.js";
 
 const app = express();
-const port = 5000;
+const port = config.port;
 
 const server = { app, port };
 
